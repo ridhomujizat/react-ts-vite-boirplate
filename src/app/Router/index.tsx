@@ -5,10 +5,11 @@ import ListRoute from "./ListRoute";
 export default function IndexRoute() {
   return (
     <Routes>
-      {ListRoute.map((val) => (
+      {ListRoute.map((val, index) => (
         <Route
           index={val.index}
           path={val.path}
+          key={index}
           element={
             <Suspense>
               <val.comp />

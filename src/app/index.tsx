@@ -7,6 +7,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import Router from "./Router";
 
 export default function index() {
+  // console.log(import.meta.env.DEV)
   return (
     <ThemeProvider theme={Theme}>
       <CssBaseline />
