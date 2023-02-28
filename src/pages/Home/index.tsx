@@ -1,7 +1,21 @@
-import React from 'react'
+import React from "react";
+import { Button, Box } from "@mui/material";
+import useToast from "hooks/useToast";
 
 export default function Home() {
+  const toast = useToast();
+
+  const clickMe = () => {
+    toast.openToast({
+      headMsg: "Role Access Added",
+      message: "",
+      severity: "success",
+    });
+  };
+
   return (
-    <div>TEST</div>
-  )
+    <Box>
+      <Button onClick={clickMe}>Click Me</Button>
+    </Box>
+  );
 }
